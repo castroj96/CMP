@@ -15,7 +15,7 @@
                             <label for="id" class="col-md-4 col-form-label text-md-right">{{ __('logins.id') }}</label>
 
                             <div class="col-md-6">
-                                <input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id" value="{{ old('id') }}" required autocomplete="id" autofocus>
+                                <input id="id" type="text" class="form-control @error('id') is-invalid @enderror" name="id" value="{{ old('id') }}" required autocomplete="id" autofocus>
 
                                 @error('id')
                                 <span class="invalid-feedback" role="alert">
@@ -85,7 +85,7 @@
                             <label for="isMember" class="col-md-4 col-form-label text-md-right">{{ __('logins.isMember') }}</label>
 
                             <div class="col-md-6">
-                                <select class="custom-select" id="isMember">
+                                <select id="isMember" name="isMember" class="custom-select @error('isMember') is-invalid @enderror" required>
                                     <option selected>{{__('logins.chooseOption')}}</option>
                                     <option value="1">{{__('logins.yesMember')}}</option>
                                     <option value="2">{{__('logins.noMember')}}</option>
