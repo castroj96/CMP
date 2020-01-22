@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->date('dateBirth');
             $table->integer('isMember')->unsigned();
             $table->foreign('isMember')->references('id')->on('roles')->onDelete('cascade');
+            $table->integer('gender')->unsigned();
+            $table->foreign('gender')->references('id')->on('genders')->onDelete('cascade');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

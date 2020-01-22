@@ -12,4 +12,11 @@
         'email' => 'E-mail Address',
         'password' => 'Password',
         'confirmPassword' => 'Confirm Password',
+        'gender' => 'Gender',
+        'male' => 'Male',
+        'female' => 'Female',
+        'address1' => 'Address',
+        'district' => "District",
+        'canton' => 'Canton',
+        'province' => 'Province',
     ];

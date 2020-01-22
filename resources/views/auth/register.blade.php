@@ -91,7 +91,18 @@
                                     <option value="2">{{__('logins.noMember')}}</option>
                                 </select>
                             </div>
+                        </div>
 
+                        <div class="form-group row custom-checkbox">
+                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('logins.gender') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="gender" name="gender" class="custom-select @error('gender') is-invalid @enderror" required>
+                                    <option selected>{{__('logins.chooseOption')}}</option>
+                                    <option value="1">{{__('logins.male')}}</option>
+                                    <option value="2">{{__('logins.female')}}</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="form-group row">

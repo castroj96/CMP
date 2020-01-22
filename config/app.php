@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CMP'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,8 +26,8 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
-
+    //'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'testing'),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
