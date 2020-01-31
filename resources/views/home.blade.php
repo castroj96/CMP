@@ -29,7 +29,7 @@
                         <h6>{{__('commons.personalinfo')}}</h6>
                     </div>
 
-                    <form method="POST" action="{{ route('home') }}">
+                    <form method="POST" action="{{ route('home.save') }}">
                         @csrf
 
                         <!--province-->
@@ -37,7 +37,11 @@
                             <label for="province" class="col-md-4 col-form-label text-md-right">{{ __('logins.province') }}</label>
 
                             <div class="col-md-6">
-                                <input id="province" type="text" class="form-control @error('province') is-invalid @enderror" name="province" value="{{ old('province') }}" required autocomplete="province" autofocus>
+                                <select id="province" name="province" class="form-control @error('province') is-invalid @enderror">
+                                    @foreach($provinces as $prov)
+                                        <option value="{{$prov->id}}">{{$prov->name}}</option>
+                                    @endforeach
+                                </select>
 
                                 @error('province')
                                 <span class="invalid-feedback" role="alert">

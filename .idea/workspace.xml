@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da1f2cc-abc4-48cf-bd1c-3bb4a712be59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_16_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2025_01_16_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/commons.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/commons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/logins.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/logins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +133,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/data" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/database/seeds" />
+      <recent name="$PROJECT_DIR$/database/seeds/data" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
@@ -180,6 +182,10 @@
       <workItem from="1579149084946" duration="2275000" />
       <workItem from="1579199853414" duration="3241000" />
       <workItem from="1579213034424" duration="3512000" />
+      <workItem from="1580240382127" duration="3552000" />
+      <workItem from="1580394031362" duration="4239000" />
+      <workItem from="1580509367913" duration="3027000" />
+      <workItem from="1580513207541" duration="909000" />
     </task>
     <servers />
   </component>
@@ -248,12 +254,15 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="714" y="462" key="NewPhpFileDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1579043555388" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1579213036081">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state x="573" y="382" key="com.intellij.ide.util.TipDialog" timestamp="1580513209995">
+      <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1579015832854" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1579213036081" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1580394031783" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1580509409686" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1580240383273" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1579199854787" />
+    <state x="573" y="382" key="com.intellij.ide.util.TipDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1580513209995" />
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1579215562194">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
