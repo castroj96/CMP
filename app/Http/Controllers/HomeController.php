@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,7 +23,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {
@@ -30,22 +31,42 @@ class HomeController extends Controller
         return view('home', compact('provinces'));
     }
 
+    /**
+     * Load the canton dropdown menu
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function loadCanton(Request $request)
+    {
+        $cantons = DB::table('cantons')->where('prov', $request->province)->pluck('name', 'id');
+        return response()->json($cantons);
+    }
+
+    /**
+     * Load the district dropdown menu
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function loadDistrict(Request $request)
+    {
+        $districts = DB::table('districts')->where('canton', $request->canton)->pluck('name', 'id');
+        return response()->json($districts);
+    }
+
     protected function save(Request $request)
     {
-        $data = $request->all();
-
-        $validData = Validator::make($request->all(), [
-            'province' => 'gte:1|lte:7',
-            'canton' => 'required|string|max:45',
-            'district' => 'required|string|max:45',
+        $validator = Validator::make($request->all(), [
+            'province' => 'required|gte:1|lte:7',
+            'canton' => 'required|gte:1|lte:82',
+            'district' => 'required|gte:1|lte:484',
             'address1' => 'required|string|max:255',
         ]);
 
-        if ($validData->fails())
+        if ($validator->passes())
         {
-            return redirect('/home')->withErrors($validData)->withInput();
+            return response()->json(['success'=>'Data stored']);
         }
-
-        return $request->all();
+        return response()->json(['error'=>$validator->errors()->all()]);
     }
+
 }

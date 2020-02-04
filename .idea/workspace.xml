@@ -4,7 +4,6 @@
     <list default="true" id="3da1f2cc-abc4-48cf-bd1c-3bb4a712be59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -185,7 +184,11 @@
       <workItem from="1580240382127" duration="3552000" />
       <workItem from="1580394031362" duration="4239000" />
       <workItem from="1580509367913" duration="3027000" />
-      <workItem from="1580513207541" duration="909000" />
+      <workItem from="1580513207541" duration="1249000" />
+      <workItem from="1580577763198" duration="1011000" />
+      <workItem from="1580590118690" duration="2563000" />
+      <workItem from="1580702155305" duration="7408000" />
+      <workItem from="1580786325990" duration="5716000" />
     </task>
     <servers />
   </component>
@@ -250,17 +253,21 @@
     </state>
     <state width="1750" height="341" key="GridCell.Tab.1.right/0.23.1792.1017@0.23.1792.1017" timestamp="1579217208107" />
     <state width="1750" height="341" key="GridCell.Tab.1.right/0.23.1792.1019@0.23.1792.1019" timestamp="1579151652718" />
+    <state x="631" y="355" key="NewPhpClassDialog" timestamp="1580704063181">
+      <screen x="0" y="23" width="1792" height="1021" />
+    </state>
+    <state x="631" y="355" key="NewPhpClassDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1580704063181" />
     <state x="714" y="462" key="NewPhpFileDialog" timestamp="1579043555388">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="714" y="462" key="NewPhpFileDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1579043555388" />
-    <state x="573" y="382" key="com.intellij.ide.util.TipDialog" timestamp="1580513209995">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1580786341230">
+      <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1579015832854" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1580394031783" />
-    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1580509409686" />
-    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1580240383273" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1580786341230" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1580590118952" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1580702174951" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1579199854787" />
     <state x="573" y="382" key="com.intellij.ide.util.TipDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1580513209995" />
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1579215562194">
@@ -268,10 +275,10 @@
     </state>
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1579215562194" />
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1579149900336" />
-    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1579214849146">
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1580578067945">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1579214849146" />
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1580578067945" />
     <state x="625" y="450" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579150379138">
       <screen x="0" y="23" width="1792" height="1019" />
     </state>

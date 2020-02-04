@@ -29,7 +29,11 @@
                         <h6>{{__('commons.personalinfo')}}</h6>
                     </div>
 
-                    <form method="POST" action="{{ route('home.save') }}">
+                     <div class="alert alert-danger print-error-msg" style="display:none">
+                         <ul></ul>
+                     </div>
+
+                    <form>
                         @csrf
 
                         <!--province-->
@@ -55,8 +59,9 @@
                         <div class="form-group row">
                             <label for="canton" class="col-md-4 col-form-label text-md-right">{{ __('logins.canton') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="canton" type="text" class="form-control @error('canton') is-invalid @enderror" name="canton" value="{{ old('canton') }}" required autocomplete="canton" autofocus>
+                            <div class="col-md-6 canton">
+                                <select id="canton" name="canton" class="form-control @error('canton') is-invalid @enderror">
+                                </select>
 
                                 @error('canton')
                                 <span class="invalid-feedback" role="alert">
@@ -71,7 +76,8 @@
                             <label for="district" class="col-md-4 col-form-label text-md-right">{{ __('logins.district') }}</label>
 
                             <div class="col-md-6">
-                                <input id="district" type="text" class="form-control @error('district') is-invalid @enderror" name="district" value="{{ old('district') }}" required autocomplete="district" autofocus>
+                                <select id="district" name="district" class="form-control @error('district') is-invalid @enderror">
+                                </select>
 
                                 @error('district')
                                 <span class="invalid-feedback" role="alert">
@@ -98,7 +104,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-success btn-submit">
                                     {{ __('commons.save') }}
                                 </button>
                             </div>
@@ -111,3 +117,99 @@
     </div>
 </div>
 @endsection
+
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        var _token = $('input[name="_token"]').val();
+        var province = $('select[name="province"]').val();
+        var canton = $('select[name="canton"]').val();
+        var district = $('select[name="district"]').val();
+        var address1 = $('input[name="address1"]').val();
+
+        $(".btn-submit").click(function(e){
+            e.preventDefault();
+
+            province = $('select[name="province"]').val();
+            canton = $('select[name="canton"]').val();
+            district = $('select[name="district"]').val();
+            address1 = $('input[name="address1"]').val();
+
+            $.ajax({
+                url: '/homeSave',
+                method: "POST",
+                data:{_token: _token, province: province, canton: canton, district: district, address1: address1},
+                success: function(data){
+                    if($.isEmptyObject(data.error)){
+                        printMsg(data, true);
+                    }else{
+                        printMsg(data.error, false);
+                    }
+                },
+            });
+        });
+
+        $("#province").click(function(e){
+            e.preventDefault();
+
+            province = $('select[name="province"]').val();
+
+            $.ajax({
+                url: '/homeCanton',
+                method: "POST",
+                data:{_token: _token, province: province},
+                success: function(data)
+                {
+                    clearSelect("#canton");
+                    clearSelect("#district");
+                    populateSelect(data,"#canton");
+                }
+            })
+        });
+
+        $("#canton").click(function(e){
+            e.preventDefault();
+
+            canton = $('select[name="canton"]').val();
+
+            $.ajax({
+                url: '/homeDistrict',
+                method: "POST",
+                data:{_token: _token, canton: canton},
+                success: function(data)
+                {
+                    clearSelect("#district");
+                    populateSelect(data,"#district");
+                }
+            })
+        });
+
+        function populateSelect(data, name)
+        {
+            $(name).find("select").html();
+            $.each(data, function(key, value) {
+                $(name).append('<option value="' + key + '">' + value + '</option>');
+            });
+        }
+
+        function clearSelect(name)
+        {
+            $(name).find('option').remove().html();
+        }
+
+        function printMsg(msg, success){
+            if (success == true)
+                $(".print-error-msg").removeClass("alert-danger").addClass("alert-success");
+            else
+                $(".print-error-msg").removeClass("alert-success").addClass("alert-danger");
+
+            $(".print-error-msg").find("ul").html('');
+            $(".print-error-msg").css('display','block');
+            $.each( msg, function( key, value ) {
+                $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+            });
+        }
+    });
+</script>

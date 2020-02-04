@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/home', 'HomeController@save')->name('home.save');
+Route::post('/homeSave', 'HomeController@save')->name('homeSave');
+Route::post('/homeCanton', 'HomeController@loadCanton')->name('homecanton');
+Route::post('/homeDistrict', 'HomeController@loadDistrict')->name('homedistrict');
