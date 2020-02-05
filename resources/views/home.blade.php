@@ -145,7 +145,7 @@
                     if($.isEmptyObject(data.error)){
                         printMsg(data, true);
                     }else{
-                        printMsg(data.error, false);
+                        printMsg(data, false);
                     }
                 },
             });

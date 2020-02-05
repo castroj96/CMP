@@ -13,12 +13,14 @@ class CreateCantonTable extends Migration
      */
     public function up()
     {
-        Schema::create('cantons', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->integer('prov')->unsigned();
-            $table->foreign('prov')->references('id')->on('provinces')->onDelete('cascade');
-        });
+        if(!Schema::hasTable('cantons')) {
+            Schema::create('cantons', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->integer('prov')->unsigned();
+                $table->foreign('prov')->references('id')->on('provinces')->onDelete('cascade');
+            });
+        }
     }
 
     /**

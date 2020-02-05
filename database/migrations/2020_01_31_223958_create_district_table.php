@@ -13,12 +13,14 @@ class CreateDistrictTable extends Migration
      */
     public function up()
     {
-        Schema::create('districts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->integer('canton')->unsigned();
-            $table->foreign('canton')->references('id')->on('cantons')->onDelete('cascade');
-        });
+        if(!Schema::hasTable('districts')) {
+            Schema::create('districts', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->integer('canton')->unsigned();
+                $table->foreign('canton')->references('id')->on('cantons')->onDelete('cascade');
+            });
+        }
     }
 
     /**
