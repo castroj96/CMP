@@ -13,8 +13,8 @@ class CreateGenderTable extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('roles')) {
-            Schema::create('roles', function (Blueprint $table) {
+        if(!Schema::hasTable('genders')) {
+            Schema::create('genders', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('description');
                 $table->timestamps();

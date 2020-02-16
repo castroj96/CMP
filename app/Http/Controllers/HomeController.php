@@ -24,7 +24,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return Renderable
+     * @return \Illuminate\Support\Collection
      */
     public function index()
     {
@@ -60,7 +60,8 @@ class HomeController extends Controller
             'province' => 'required|gte:1|lte:7',
             'canton' => 'required|gte:1|lte:82',
             'district' => 'required|gte:1|lte:484',
-            'address1' => 'required|string|max:255',
+            'address1' => 'required|string|max:190|min:10',
+            'phoneNumber' => 'required|digits:8'
         ]);
 
         if (!$validator->passes())
@@ -72,23 +73,29 @@ class HomeController extends Controller
         $canton = $request->canton;
         $district = $request->district;
         $address = $request->address1;
-        $rowData = 0;
+        $phoneNumber = $request->phoneNumber;
+        $rowData = null;
 
-        $row = DB::table('personalData')->select('userId')->where('userId',Auth::Id())->count("userId");
+        $row = DB::table('personaldata')->where('userId',Auth::Id())->pluck('id');
 
-        if ($row == 0){
-            $dataToStore = array("userId" => Auth::Id(), "provinceId" => $province,
-                                "cantonId" => $canton, "districtId" => $district,
-                                "address" => $address);
-            $rowData = DB::table('personalData')->insertGetId($dataToStore);
+        $dataToStore = array("userId" => Auth::Id(), "provinceId" => $province,
+            "cantonId" => $canton, "districtId" => $district,
+            "address" => $address, "phoneNumber" => $phoneNumber);
+
+        if ($row->isEmpty()){
+            DB::table('personaldata')->insert($dataToStore);
+            $rowData = DB::table('personaldata')->where('userId',Auth::Id())->get('id');
+        }
+        else
+        {
+            DB::table('personaldata')->where('id',$row)->update($dataToStore);
+            $rowData = DB::table('personaldata')->where('userId',Auth::Id())->get('id');
         }
 
-        if($row == 0 && $rowData != 0)
+        if($rowData->isNotEmpty())
             return response()->json(['success'=> 'Data saved']);
-        if($row == 0 && $rowData == 0)
+        else
             return response()->json(['error'=> 'Data could not be saved']);
-
-        return response()->json(['error'=> 'Data was already saved']);
     }
 
 }

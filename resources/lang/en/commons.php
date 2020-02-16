@@ -9,4 +9,5 @@
         'logout' => 'Logout',
         'personalinfo' => 'Personal information',
         'save' => 'Save',
+        'edit' => 'Edit',
     ];

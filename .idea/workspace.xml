@@ -4,17 +4,12 @@
     <list default="true" id="3da1f2cc-abc4-48cf-bd1c-3bb4a712be59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_15_154947_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_15_154947_create_roles_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_16_222747_create_gender_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_16_222747_create_gender_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_30_143306_create_province_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_30_143306_create_province_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_31_223334_create_canton_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_31_223334_create_canton_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_31_223958_create_district_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_31_223958_create_district_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2025_01_16_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2025_01_16_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_05_000527_create_personaldata_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_05_000527_create_personaldata_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2025_01_16_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_04_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/commons.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/commons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/logins.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/logins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -200,7 +196,20 @@
       <workItem from="1580786325990" duration="5716000" />
       <workItem from="1580794339702" duration="65000" />
       <workItem from="1580826775354" duration="2126000" />
-      <workItem from="1580861031806" duration="2916000" />
+      <workItem from="1580861031806" duration="3107000" />
+      <workItem from="1580874198954" duration="346000" />
+      <workItem from="1580874892559" duration="34000" />
+      <workItem from="1580875939966" duration="10000" />
+      <workItem from="1580877848594" duration="42000" />
+      <workItem from="1580953411445" duration="25000" />
+      <workItem from="1581031080467" duration="5668000" />
+      <workItem from="1581176082421" duration="1561000" />
+      <workItem from="1581179313716" duration="382000" />
+      <workItem from="1581265145381" duration="546000" />
+      <workItem from="1581648514616" duration="254000" />
+      <workItem from="1581648847708" duration="15000" />
+      <workItem from="1581820740081" duration="154000" />
+      <workItem from="1581822801607" duration="4046000" />
     </task>
     <servers />
   </component>
@@ -221,6 +230,10 @@
       <screen x="0" y="23" width="1792" height="1019" />
     </state>
     <state x="359" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1579150176941" />
+    <state x="584" y="274" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581648803680">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="584" y="274" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1581648803680" />
     <state x="544" y="186" key="#phpunit.xml" timestamp="1579149667475">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -273,15 +286,16 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="714" y="462" key="NewPhpFileDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1579043555388" />
-    <state x="573" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1580861038421">
-      <screen x="0" y="23" width="1792" height="1025" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1581822803554">
+      <screen x="0" y="23" width="1792" height="1019" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1579015832854" />
-    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1580786341230" />
-    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1580826775567" />
-    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1580702174951" />
-    <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1579199854787" />
-    <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1580861038421" />
+    <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1581648847249" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1581822803554" />
+    <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1021@0.23.1792.1021" timestamp="1581265148494" />
+    <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1581179315100" />
+    <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1581031086417" />
+    <state x="573" y="384" key="com.intellij.ide.util.TipDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1580953411890" />
     <state x="0" y="23" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1579215562194">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>

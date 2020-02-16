@@ -19,4 +19,5 @@
         'district' => "District",
         'canton' => 'Canton',
         'province' => 'Province',
+        'phoneNumber' => 'Phone Number',
     ];

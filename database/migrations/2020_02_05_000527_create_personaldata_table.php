@@ -16,15 +16,16 @@ class CreatePersonaldataTable extends Migration
         if(!Schema::hasTable('personaldata')) {
             Schema::create('personaldata', function (Blueprint $table) {
                 $table->increments('id');
-                $table->integer('userId')->unique();
+                $table->integer('userId');
                 $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
-                $table->integer('provinceId')->unique();
+                $table->integer('provinceId')->unsigned();
                 $table->foreign('provinceId')->references('id')->on('provinces')->onDelete('cascade');
-                $table->integer('cantonId')->unique();
+                $table->integer('cantonId')->unsigned();
                 $table->foreign('cantonId')->references('id')->on('cantons')->onDelete('cascade');
-                $table->integer('districtId')->unique();
+                $table->integer('districtId')->unsigned();
                 $table->foreign('districtId')->references('id')->on('districts')->onDelete('cascade');
                 $table->string('address');
+                $table->integer('phoneNumber');
             });
         }
     }
