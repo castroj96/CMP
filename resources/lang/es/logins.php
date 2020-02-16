@@ -1,0 +1,23 @@
+<?php
+    return [
+        'id' => 'Cédula',
+        'name' => 'Nombre',
+        'lastName' => 'Primer Apellido',
+        'motherLastName' => "Segundo Apellido",
+        'dateBirth' => 'Fecha de nacimiento',
+        'isMember' => 'Desea ser considerado un miembro?',
+        'yesMember' => 'Si, si quiero',
+        'noMember' => 'No, no quiero',
+        'chooseOption' => 'Escoger...',
+        'email' => 'Correo electrónico',
+        'password' => 'Contraseña',
+        'confirmPassword' => 'Confirmar contraseña',
+        'gender' => 'Género',
+        'male' => 'Hombre',
+        'female' => 'Mujer',
+        'address1' => 'Dirección',
+        'district' => "Distrito",
+        'canton' => 'Cantón',
+        'province' => 'Provincia',
+        'phoneNumber' => 'Teléfono',
+    ];
