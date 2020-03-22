@@ -10,4 +10,5 @@
         'personalinfo' => 'Personal information',
         'save' => 'Save',
         'edit' => 'Edit',
+        'content' => 'Content',
     ];

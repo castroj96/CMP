@@ -45,7 +45,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 70px;
             }
 
             .links > a {
@@ -61,17 +61,25 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            @media only screen and (max-width: 600px) {
+                .title {
+                    font-size: 40px;
+                }
+            }
+
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+
             @if (Route::has('login'))
                 <div class="top-right links">
+                    <a href="{{ url('/content') }}">{{__('commons.content')}}</a>
                     @auth
                         <a href="{{ url('/home') }}">{{__('commons.home')}}</a>
                     @else
                         <a href="{{ route('login') }}">{{__('commons.login')}}</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">{{__('commons.register')}}</a>
                         @endif

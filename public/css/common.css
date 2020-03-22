@@ -10,3 +10,16 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.Video
+{
+    width: 720px;;
+    height: 480px;
+}
+@media only screen and (max-width: 400px)
+{
+    .Video {
+        width: 320px;;
+        height: 240px;
+    }
+}

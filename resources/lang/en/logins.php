@@ -20,4 +20,7 @@
         'canton' => 'Canton',
         'province' => 'Province',
         'phoneNumber' => 'Phone Number',
+        'rememberMe' => 'Remember me',
+        'login' =>'Login',
+        'forgetPass' => 'Forget your password?',
     ];
