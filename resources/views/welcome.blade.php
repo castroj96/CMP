@@ -63,6 +63,11 @@
             }
 
             @media only screen and (max-width: 600px) {
+
+                .links > a {
+                    font-size: 8px;
+                }
+
                 .title {
                     font-size: 40px;
                 }
