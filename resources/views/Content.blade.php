@@ -9,14 +9,21 @@
                     <div class="card-body">
                         <div class="card-title text-center">
                             <!--Agregar fotos, videos, etc aqui-->
-                            <iframe class="Video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcenmiscr%2Fvideos%2F220046862403505" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                            <iframe class="Video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcenmiscr%2Fvideos%2F643522143099120" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                            <iframe class="Video" src="https://www.youtube.com/embed/videoseries?list=PLxUvQyNWI2oD93x5QjmZLdUR2bU2E4LrY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+                    <div class="card-header">{{__('commons.bankAccount')}}</div>
+                    <div class="card-body">
+                        <div class="card-title text-center">
+                            <p>Banco Nacional de Costa Rica</p>
+                            <p>Número de cuenta: CR97015100010012054491</p>
+                            <p>Cédula Jurídica: 3-002-051271</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
 @endsection
