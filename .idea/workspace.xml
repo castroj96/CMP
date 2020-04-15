@@ -5,11 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/commons.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/commons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/logins.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/logins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/es/commons.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/commons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/es/logins.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/logins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/es/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
