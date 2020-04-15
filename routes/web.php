@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes(['verify' => true]);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,7 +21,9 @@ Route::get('/content', function (){
     return view ('Content');
 })->name('content');
 
-Auth::routes(['verify' => true]);
+Route::get('/contact', function (){
+    return view('contact');
+})->name('contact');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

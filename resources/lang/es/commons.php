@@ -11,4 +11,7 @@
         'save' => 'Guardar',
         'edit' => 'Editar',
         'content' => 'Contenido',
+        'contact' => 'Contacto',
+        'bankAccount' => 'Cuenta Bancaria',
+        'whereWeAre' => 'Adonde estamos',
     ];

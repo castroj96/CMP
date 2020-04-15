@@ -11,4 +11,7 @@
         'save' => 'Save',
         'edit' => 'Edit',
         'content' => 'Content',
+        'contact' => 'Contact',
+        'bankAccount' => 'Bank Account',
+        'whereWeAre' => 'Where we are',
     ];

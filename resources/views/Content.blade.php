@@ -13,14 +13,6 @@
 
                         </div>
                     </div>
-                    <div class="card-header">{{__('commons.bankAccount')}}</div>
-                    <div class="card-body">
-                        <div class="card-title text-center">
-                            <p>Banco Nacional de Costa Rica</p>
-                            <p>Número de cuenta: CR97015100010012054491</p>
-                            <p>Cédula Jurídica: 3-002-051271</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
