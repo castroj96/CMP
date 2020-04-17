@@ -44,6 +44,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">{{__('commons.contact') }}</a>
                         </li>
+
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('chat') }}">{{__('commons.videoConference') }}</a>
+                            </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -65,6 +71,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="{{ route('chat') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('chat-form').submit();">
+                                        {{ __('commons.videoConference') }}
+                                    </a>
+
+                                    <form id="chat-form" action="{{ route('chat') }}" method="GET" style="display: none;">
+                                        @csrf
+                                    </form>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

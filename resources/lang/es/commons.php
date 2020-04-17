@@ -14,4 +14,5 @@
         'contact' => 'Contacto',
         'bankAccount' => 'Cuenta Bancaria',
         'whereWeAre' => 'Adonde estamos',
+        'videoConference' => 'Video Conferencia',
     ];
