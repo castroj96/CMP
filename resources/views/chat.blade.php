@@ -27,7 +27,7 @@
 
         const domain = "meet.jit.si";
         const options = {
-            roomName: 'CMPCulto',
+            roomName: '{{$roomName}}',
             width: '100%',
             height: 700,
             parentNode: document.querySelector('#meet'),

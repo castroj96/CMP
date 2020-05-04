@@ -42,6 +42,10 @@
     color: white;
 }
 
+.table td,th{
+    text-align: center;
+}
+
 @media only screen and (max-width: 400px)
 {
     .Video {

@@ -38,6 +38,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">{{__('commons.home') }}</a>
+                            </li>
+                        @endauth
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('content') }}">{{__('commons.content') }}</a>
                         </li>
@@ -46,9 +53,11 @@
                         </li>
 
                         @auth
+
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('chat') }}">{{__('commons.videoConference') }}</a>
+                                <a class="nav-link" href="{{ route('personalData') }}">{{__('commons.personalinfo') }}</a>
                             </li>
+
                         @endauth
                     </ul>
 
@@ -71,16 +80,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                                    <a class="dropdown-item" href="{{ route('chat') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('chat-form').submit();">
-                                        {{ __('commons.videoConference') }}
-                                    </a>
-
-                                    <form id="chat-form" action="{{ route('chat') }}" method="GET" style="display: none;">
-                                        @csrf
-                                    </form>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

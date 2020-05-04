@@ -1,5 +1,6 @@
 <?php
     return [
+        'activities' => 'Actividades',
         'home' => 'Inicio',
         'login' => 'Inicio de sesión',
         'register' => 'Registro',

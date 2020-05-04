@@ -26,7 +26,9 @@ Route::get('/contact', function (){
 })->name('contact');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/chat', 'ChatController@index')->name('chat');
-Route::post('/homeSave', 'HomeController@save')->name('homeSave');
-Route::post('/homeCanton', 'HomeController@loadCanton')->name('homecanton');
-Route::post('/homeDistrict', 'HomeController@loadDistrict')->name('homedistrict');
+Route::get('/personalData', 'personalDataController@index')->name('personalData');
+Route::get('/chat/{id}', 'ChatController@index')->name('chat');
+Route::get('/activities', 'ActivitiesController@index')->name('activities');
+Route::post('/personalDataSave', 'PersonalDataController@save')->name('personalDataSave');
+Route::post('/personalDataCanton', 'PersonalDataController@loadCanton')->name('personalDatacanton');
+Route::post('/personalDataDistrict', 'PersonalDataController@loadDistrict')->name('personalDatadistrict');
