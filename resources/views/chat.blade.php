@@ -25,9 +25,9 @@
 <script>
     $(document).ready(function(){
 
-        var domain = "meet.jit.si";
-        var options = {
-            roomName: 'CMP Culto',
+        const domain = "meet.jit.si";
+        const options = {
+            roomName: 'CMPCulto',
             width: '100%',
             height: 700,
             parentNode: document.querySelector('#meet'),
@@ -36,7 +36,7 @@
                 email: '{{Auth::user()->email}}',
                 displayName: '{{Auth::user()->name}} {{Auth::user()->lastName}}'
             }
-        }
+        };
         var api = new JitsiMeetExternalAPI(domain, options);
     });
 </script>
