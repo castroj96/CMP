@@ -26,6 +26,7 @@ class CreatePersonaldataTable extends Migration
                 $table->foreign('districtId')->references('id')->on('districts')->onDelete('cascade');
                 $table->string('address');
                 $table->integer('phoneNumber');
+                $table->timestamps();
             });
         }
     }

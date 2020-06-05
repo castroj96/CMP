@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\csvCantons;
+use App\Canton;
 
 class CantonsTableSeeder extends Seeder
 {
@@ -14,7 +14,7 @@ class CantonsTableSeeder extends Seeder
     {
         if (($handle = fopen ( public_path () . '/data/Cantons.csv', 'r' )) !== FALSE) {
             while ( ($data = fgetcsv ( $handle, 1000, ',' )) !== FALSE ) {
-                $csv_data = new csvCantons ();
+                $csv_data = new Canton ();
                 $csv_data->name = $data[1];
                 $csv_data->prov = $data[2];
                 $csv_data->save ();

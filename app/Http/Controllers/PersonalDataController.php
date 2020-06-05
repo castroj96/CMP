@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Canton;
+use App\District;
+use App\Province;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Support\Renderable;
 use Auth;
@@ -28,7 +31,7 @@ class PersonalDataController extends Controller
      */
     public function index()
     {
-        $provinces = DB::table('provinces')->get();
+        $provinces = Province::all();
         return view('personalData', compact('provinces'));
     }
 
@@ -39,7 +42,7 @@ class PersonalDataController extends Controller
      */
     protected function loadCanton(Request $request)
     {
-        $cantons = DB::table('cantons')->where('prov', $request->province)->pluck('name', 'id');
+        $cantons = Canton::where('prov', $request->province)->pluck('name','id');
         return response()->json($cantons);
     }
 
@@ -50,7 +53,7 @@ class PersonalDataController extends Controller
      */
     protected function loadDistrict(Request $request)
     {
-        $districts = DB::table('districts')->where('canton', $request->canton)->pluck('name', 'id');
+        $districts = District::where('canton', $request->canton)->pluck('name', 'id');
         return response()->json($districts);
     }
 
@@ -76,23 +79,26 @@ class PersonalDataController extends Controller
         $phoneNumber = $request->phoneNumber;
         $rowData = null;
 
-        $row = DB::table('personaldata')->where('userId',Auth::Id())->pluck('id');
-
-        $dataToStore = array("userId" => Auth::Id(), "provinceId" => $province,
-            "cantonId" => $canton, "districtId" => $district,
-            "address" => $address, "phoneNumber" => $phoneNumber);
+        $row = PersonalData::where('userId',Auth::Id())->pluck('id');
 
         if ($row->isEmpty()){
-            DB::table('personaldata')->insert($dataToStore);
-            $rowData = DB::table('personaldata')->where('userId',Auth::Id())->get('id');
+            $personalData = new PersonalData;
+            $personalData->userId = Auth::Id();
         }
         else
         {
-            DB::table('personaldata')->where('id',$row)->update($dataToStore);
-            $rowData = DB::table('personaldata')->where('userId',Auth::Id())->get('id');
+            $personalData = PersonalData::find($row)->first();
         }
 
-        if($rowData->isNotEmpty())
+        $personalData->provinceId = $province;
+        $personalData->cantonId = $canton;
+        $personalData->districtId = $district;
+        $personalData->address = $address;
+        $personalData->phoneNumber = $phoneNumber;
+        $personalData->updated_at = time();
+        $personalData->save();
+
+        if($personalData->id > 0)
             return response()->json(['success'=> 'Data saved']);
         else
             return response()->json(['error'=> 'Data could not be saved']);

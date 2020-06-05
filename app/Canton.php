@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class csvCantons extends Model
+class Canton extends Model
 {
+    //
     protected $table = 'cantons';
     public $timestamps = false;
 }
