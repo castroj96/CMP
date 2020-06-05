@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da1f2cc-abc4-48cf-bd1c-3bb4a712be59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CMP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Canton.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Canton.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/District.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/csvCantons.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/csvDistricts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/csvDistricts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/personalData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/personalData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_05_000527_create_personaldata_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_05_000527_create_personaldata_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CantonsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CantonsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DistrictsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DistrictsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/personalData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PersonalData.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +237,8 @@
       <workItem from="1584903760725" duration="18000" />
       <workItem from="1591048745962" duration="164000" />
       <workItem from="1591049108361" duration="34000" />
-      <workItem from="1591330252770" duration="5132000" />
+      <workItem from="1591330252770" duration="5375000" />
+      <workItem from="1591380362867" duration="2937000" />
     </task>
     <servers />
   </component>
@@ -260,6 +255,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="777" y="442" key="NewPhpFileDialog" timestamp="1588555452880">
@@ -281,9 +277,10 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="618" y="236" key="run.anything.popup/0.23.1920.977/1920.23.1920.1057@0.23.1920.977" timestamp="1588560460761" />
-    <state x="2541" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1591332244564">
-      <screen x="1920" y="23" width="1920" height="1057" />
+    <state x="580" y="228" width="670" height="717" key="search.everywhere.popup" timestamp="1591381865969">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="580" y="228" width="670" height="717" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1591381865969" />
     <state x="2541" y="238" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/-1792.23.1792.1097/0.23.1920.973@1920.23.1920.1057" timestamp="1591332244564" />
   </component>
 </project>

@@ -6,9 +6,7 @@ use App\Canton;
 use App\District;
 use App\Province;
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Support\Renderable;
 use Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\personalData;
 
@@ -26,7 +24,6 @@ class PersonalDataController extends Controller
 
     /**
      * Show the application dashboard.
-     *
      * @return \Illuminate\Support\Collection
      */
     public function index()
@@ -36,27 +33,32 @@ class PersonalDataController extends Controller
     }
 
     /**
-     * Load the canton dropdown menu
+     * Load the canton dropdown menu.
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     protected function loadCanton(Request $request)
     {
-        $cantons = Canton::where('prov', $request->province)->pluck('name','id');
+        $cantons = Canton::getCantonsByProvince($request->province);
         return response()->json($cantons);
     }
 
     /**
-     * Load the district dropdown menu
+     * Load the district dropdown menu.
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     protected function loadDistrict(Request $request)
     {
-        $districts = District::where('canton', $request->canton)->pluck('name', 'id');
+        $districts = District::getDistrictsbyCanton($request->canton);
         return response()->json($districts);
     }
 
+    /**
+     * Create or update the personal data of a user in the database.
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     protected function save(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -68,37 +70,11 @@ class PersonalDataController extends Controller
         ]);
 
         if (!$validator->passes())
-        {
             return response()->json(['error'=>$validator->errors()->all()]);
-        }
 
-        $province = $request->province;
-        $canton = $request->canton;
-        $district = $request->district;
-        $address = $request->address1;
-        $phoneNumber = $request->phoneNumber;
-        $rowData = null;
+        $result = PersonalData::SaveOrUpdateUserData($request, Auth::Id());
 
-        $row = PersonalData::where('userId',Auth::Id())->pluck('id');
-
-        if ($row->isEmpty()){
-            $personalData = new PersonalData;
-            $personalData->userId = Auth::Id();
-        }
-        else
-        {
-            $personalData = PersonalData::find($row)->first();
-        }
-
-        $personalData->provinceId = $province;
-        $personalData->cantonId = $canton;
-        $personalData->districtId = $district;
-        $personalData->address = $address;
-        $personalData->phoneNumber = $phoneNumber;
-        $personalData->updated_at = time();
-        $personalData->save();
-
-        if($personalData->id > 0)
+        if($result > 0)
             return response()->json(['success'=> 'Data saved']);
         else
             return response()->json(['error'=> 'Data could not be saved']);
