@@ -8,7 +8,7 @@ use App\Province;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Validator;
-use App\personalData;
+use App\PersonalData;
 
 class PersonalDataController extends Controller
 {

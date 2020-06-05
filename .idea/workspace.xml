@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3da1f2cc-abc4-48cf-bd1c-3bb4a712be59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Canton.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Canton.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/District.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/personalData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PersonalData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +236,8 @@
       <workItem from="1591048745962" duration="164000" />
       <workItem from="1591049108361" duration="34000" />
       <workItem from="1591330252770" duration="5375000" />
-      <workItem from="1591380362867" duration="2937000" />
+      <workItem from="1591380362867" duration="5245000" />
+      <workItem from="1591388702297" duration="773000" />
     </task>
     <servers />
   </component>
@@ -258,6 +257,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="744" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591386864055">
+      <screen x="0" y="23" width="1792" height="1016" />
+    </state>
+    <state x="744" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1792.1016@0.23.1792.1016" timestamp="1591386864055" />
     <state x="777" y="442" key="NewPhpFileDialog" timestamp="1588555452880">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -273,6 +276,10 @@
     <state x="573" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1584766844093" />
     <state x="573" y="380" key="com.intellij.ide.util.TipDialog/0.23.1792.1019@0.23.1792.1019" timestamp="1583594040862" />
     <state x="573" y="381" key="com.intellij.ide.util.TipDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1582937976979" />
+    <state x="678" y="142" width="598" height="735" key="find.popup" timestamp="1591388875945">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="678" y="142" width="598" height="735" key="find.popup/0.23.1792.1013@0.23.1792.1013" timestamp="1591388875945" />
     <state x="618" y="236" key="run.anything.popup" timestamp="1588560460761">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
