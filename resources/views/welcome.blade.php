@@ -82,6 +82,7 @@
                 <div class="top-right links">
                     <a href="{{ url('/content') }}">{{__('commons.content')}}</a>
                     <a href="{{ url('/contact') }}">{{__('commons.contact')}}</a>
+                    <a href="{{ route('event') }}">{{__('commons.event') }}</a>
                     @auth
                         <a href="{{ url('/home') }}">{{__('commons.home')}}</a>
                     @else

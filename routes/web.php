@@ -25,6 +25,10 @@ Route::get('/contact', function (){
     return view('contact');
 })->name('contact');
 
+Route::get('/event', function(){
+    return view('event');
+})->name('event');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/personalData', 'PersonalDataController@index')->name('personalData');
 Route::get('/chat/{id}', 'ChatController@index')->name('chat');

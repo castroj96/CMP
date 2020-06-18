@@ -51,7 +51,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">{{__('commons.contact') }}</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('event') }}">{{__('commons.event') }}</a>
+                        </li>
                         @auth
 
                             <li class="nav-item">

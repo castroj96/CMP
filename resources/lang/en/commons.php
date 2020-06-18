@@ -16,4 +16,5 @@
         'bankAccount' => 'Bank Account',
         'whereWeAre' => 'Where we are',
         'videoConference' => 'VideoConference',
+        'event' => 'Events',
     ];
