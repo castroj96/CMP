@@ -17,4 +17,5 @@
         'whereWeAre' => 'Where we are',
         'videoConference' => 'VideoConference',
         'event' => 'Events',
+        'data' => 'Data',
     ];

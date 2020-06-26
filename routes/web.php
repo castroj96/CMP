@@ -32,6 +32,7 @@ Route::get('/event', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/personalData', 'PersonalDataController@index')->name('personalData');
 Route::get('/chat/{id}', 'ChatController@index')->name('chat');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::post('/personalDataSave', 'PersonalDataController@save')->name('personalDataSave');
 Route::post('/personalDataCanton', 'PersonalDataController@loadCanton')->name('personalDatacanton');
 Route::post('/personalDataDistrict', 'PersonalDataController@loadDistrict')->name('personalDatadistrict');

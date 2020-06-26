@@ -51,4 +51,8 @@ class commonData extends Model
     const ROOM_GED_DULCENOMBRE_1 = 'CMP_GEDEON_DULCE_NOMBRE_1';
     const ROOM_GED_SANJUAN_1 = 'CMP_GEDEON_SAN_JUAN_1';
     const ROOM_GED_CARTAGO_1 = 'CMP_GEDEON_CARTAGO_1';
+
+    const ADMIN_CODE = 1001;
+    const MEMBER_CODE = 1;
+    const NOT_MEMBER_CODE = 2;
 }

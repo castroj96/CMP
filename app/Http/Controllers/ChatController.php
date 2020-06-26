@@ -80,7 +80,7 @@ class ChatController extends Controller
                 $roomName = commonData::ROOM_GED_CARTAGO_1;
                 break;
             default:
-                return view('home');
+                return redirect('/');
         }
 
         return view('chat')->with('roomName', $roomName);
