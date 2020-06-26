@@ -18,4 +18,5 @@
         'videoConference' => 'VideoConference',
         'event' => 'Events',
         'data' => 'Data',
+        'dashboard' => 'Dashboard',
     ];

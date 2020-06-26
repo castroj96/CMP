@@ -60,6 +60,11 @@
                                 <a class="nav-link" href="{{ route('personalData') }}">{{__('commons.personalinfo') }}</a>
                             </li>
 
+                            @if(Auth::User()->isMember == \App\commonData::ADMIN_CODE)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('dashboard') }}">{{__('commons.dashboard') }}</a>
+                                </li>
+                            @endif
                         @endauth
                     </ul>
 
