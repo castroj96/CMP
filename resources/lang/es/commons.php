@@ -19,4 +19,5 @@
         'event' => 'Eventos',
         'data' => 'Datos',
         'dashboard' => 'Dashboard',
+        'pendingData' => 'Información pendiente',
     ];
